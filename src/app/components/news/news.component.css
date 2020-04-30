@@ -1,0 +1,9 @@
+div{
+  border: 15px;
+  padding: 50px;
+  margin: 20px;
+}
+h1 , h4{
+    text-align: center;
+    color: blue;
+}

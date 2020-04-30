@@ -1,0 +1,52 @@
+#about{
+  transition: all 2s;
+}
+.about-info .fas{
+  height: 34px;
+  width: 34px;
+  background-color: #29ca8e;
+  color: #252020;
+  display: inline-block;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+.about-info h2{
+  text-align: center;
+}
+.entry-form{
+  background: #252020;
+  border-radius: 100%;
+  text-align: center;
+  padding: 6em;
+  width: 450px;
+  height: 450px;
+}
+.entry-form h2{
+  color: white;
+  margin: 0;
+}
+.entry-form .form-control{
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  box-shadow: none;
+  height: 45px;
+  margin: 10px 0;
+}
+.entry-form .submit-btn{
+  background-color: white;
+  border-radius: 50px;
+  border: 0;
+  color: #252020;
+  width: 50%;
+  height: 50px;
+  margin: 30px auto;
+  margin-bottom: 10px;
+}
+.entry-form .submit-btn:hover{
+  background: #29ca8e;
+  color: #ffffff;
+}

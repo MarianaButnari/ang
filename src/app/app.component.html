@@ -1,0 +1,56 @@
+<!-- Header / Meniul -->
+<section id="nav">
+  <div class="container-fluid">
+    <div class="inner-header">
+      <div class="row">
+        <div class="container-fluid">
+          <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <!--insigna brandului-->
+            <i class="fas fa-american-sign-language-interpreting"></i>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    (click)="isMenuCollapsed = !isMenuCollapsed">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" (click)="toHome()" routerLink="first" >Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="toAbout()" routerLink="about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="toTeam()" routerLink="ourTeam">Our Team</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="toReviews()" routerLink="reviews">Reviews</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="toMap()" routerLink="map">Map</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="toContact()" routerLink="contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="phone-num">
+                  <a class="nav-link" routerLink ="#">
+                         <!--insigna telefonului-->
+                    <i class="fa fa-phone"></i>+37369880998
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

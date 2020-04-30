@@ -1,0 +1,21 @@
+.navbar{
+  border-top: 5px solid #29ca8e ;
+  border-bottom: 0;
+  box-shadow: 0 1px 30px rgba(0,0,0,0.1);
+
+}
+.fas{
+  color:#f2db9b;
+}
+
+.inner-header .navbar ul li.phone-num i {
+  height: 34px;
+  width: 34px;
+  background-color: #f2db9b;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 50%;
+  margin-right: 11px;
+}

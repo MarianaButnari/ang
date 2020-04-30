@@ -1,0 +1,35 @@
+.team{
+  border: 15px;
+  padding: 50px;
+  margin: 20px;
+}
+.card{
+text-align: center;
+}
+.social-icons{
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.social-icons li{
+  display: inline-block;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.social-icons li a{
+  border-radius: 100px;
+  color: #29ca8e;
+  font-size: 35px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position:relative;
+  margin: 10px 10px 10px 0;
+}
+.social-icons li a:hover{
+  background-color: #29ca8e;
+  color: #ffffff;
+}

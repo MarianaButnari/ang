@@ -1,0 +1,50 @@
+<section id="about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="about-info">
+          <h2>Start your journey to a better life with our courses</h2>
+          <span>
+              <i class="fas fa-user-graduate"></i>
+            </span>
+          <h3>Profesional Trainers</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+          <span>
+              <i class="fas fa-certificate"></i>
+              <h3>International Certifications</h3>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+           </span>
+          <span>
+             <i class="fas fa-chart-bar"></i>
+            <h3>Free for 3 months</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+         </span>
+        </div>
+      </div>
+      <div class="form">
+        <form>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-offset-1 col-md-4 col-sm-12">
+                <div class="entry-form">              <!--formularul va fi trimis la aceasta adresa de email-->
+                  <form id="contact-form" role="form" action="mailto:mariana.butnari89@gmail.com" method="ghet"
+                        #myform = "ngForm" (ngSubmit) = "onSubmit(myform)">
+                    <h2>Signup today </h2>
+                    <input type="text" class="form-control" placeholder="Enter your name" name="name" required="" ngModel>
+                    <!--<input type="text" class="form-control" [(ngModel)]="fullName">-->
+                    <input type="email" class="form-control" placeholder="Enter your email address" name="email" required="" ngModel>
+                    <input type="password" class="form-control" placeholder="Enter your password" name="password" required="" ngModel>
+                    <button class="submit-btn form-control" id="contact-submit" (click)="changeButtonStatus($event)">{{buttonStatus}}</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
