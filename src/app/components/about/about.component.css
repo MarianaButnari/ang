@@ -1,3 +1,7 @@
+section {
+  position: relative;
+  padding: 100px 0;
+}
 #about{
   transition: all 2s;
 }
@@ -49,4 +53,7 @@
 .entry-form .submit-btn:hover{
   background: #29ca8e;
   color: #ffffff;
+}
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
 }

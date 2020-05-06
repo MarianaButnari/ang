@@ -14,26 +14,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" (click)="toHome()" routerLink="first" >Home<span class="sr-only">(current)</span></a>
+                <li class="nav-item " routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('nav')" routerLink="first"> Home </a>
+<!--                  <a class="nav-link" (click)="toHome()" routerLink="first"> Home </a>-->
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" (click)="toAbout()" routerLink="about">About</a>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('about')" routerLink="about"> About </a>
+<!--                  <a class="nav-link" (click)="toAbout()" routerLink="about"> About </a>-->
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" (click)="toTeam()" routerLink="ourTeam">Our Team</a>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('team')" routerLink="ourTeam"> Team </a>
+<!--                  <a class="nav-link" (click)="toTeam()" routerLink="ourTeam"> Our Team </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item" routerLinkActive="active">-->
+<!--                  <a class="nav-link" routerLink="#"> Courses </a>-->
+<!--                </li>-->
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('form')" routerLink="form"> Reviews </a>
+<!--                  <a class="nav-link" (click)="scrolltoReviews()" routerLink="form"> Reviews </a>-->
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" routerLink="#">Courses</a>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('map')" routerLink="map"> Map </a>
+<!--                  <a class="nav-link" (click)="scrolltoMap()" routerLink="map"> Map </a>-->
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" (click)="toReviews()" routerLink="reviews">Reviews</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" (click)="toMap()" routerLink="map">Map</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" (click)="toContact()" routerLink="contact">Contact</a>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('footer')" routerLink="footer"> Contact </a>
+<!--                  <a class="nav-link" (click)="scrolltoContact()" routerLink="footer"> Contact </a>-->
                 </li>
               </ul>
             </div>
@@ -54,3 +60,4 @@
     </div>
   </div>
 </section>
+

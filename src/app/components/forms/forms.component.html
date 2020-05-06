@@ -3,7 +3,7 @@
    <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-sm-12">    <!--formularul va fi trimis la aceasta adresa de email-->
-        <form id="feedback-form" role="form" action="mailto:mariana.butnari89@gmail.com" method="post" #myform = "ngForm" (ngSubmit) = "onSubmit(myform)">
+        <form id="feedback-form" role="form" action="mailto:mariana.butnari89@gmail.com" method="post" (ngSubmit) = "onSubmit()" #myform = "ngForm">
           <div class="section-title">
             <h2>Contact us</h2>
           </div>
@@ -16,8 +16,8 @@
             <textarea #feedbackMessage class="form-control" rows="6" placeholder="Enter your message" name="message" required="" ngModel ></textarea> <!--#messageInput -->
           </div>
           <div class="col-md-12 col-sm-12">
-           <input type="submit" class="form-control" name="send message" value="Send Message"
-                  (click)="message = feedbackMessage.value; feedbackMessage.value = '' ">
+           <input type="submit" class="form-control" name="send message" value="Send Message">
+<!--                  (click)="message = feedbackMessage.value; feedbackMessage.value = '' ">-->
             <!--(click)="onAddFeedback()-->
           </div>
         </form>
@@ -30,11 +30,12 @@
     </div>
    </div>
     <div class="container-fluid">
-      <div class="row">
+      <h3> Student Reviews </h3>
+      <small>from around the world</small>
+      <div class="row" *ngIf="submitreview">
         <div class="col-md-12 col-sm-12">
-          <h3> Student Reviews </h3>
-          <small>from around the world</small>
-          <h6>Your message : {{message}} </h6>
+          <h6>Name: {{userReview.name}}</h6>
+          <h6>Your message : {{userReview.message}} </h6>
         </div>
       </div>
     </div>

@@ -9,24 +9,23 @@ import { CardsComponent} from './components/cards/cards.component';
 import { CarouselComponent} from './components/carousel/carousel.component';
 import { ClassesComponent} from './components/classes/classes.component';
 
-
-
 const routes: Routes = [
   { path: '', component: AppComponent },
-  { path: 'first', component: FirstComponentComponent },
+  { path: 'first',component: FirstComponentComponent},
   { path: 'main', component: MainComponent },
   { path: 'news' , component: NewsComponent},
-  { path: 'feedbak' , component: FormsComponent},
+  { path: 'reviews' , component: FormsComponent},
   { path: 'cards' , component: CardsComponent},
   { path: 'carousel' , component: CarouselComponent},
   // { path: 'error' , component: ClassesComponent }
   // { path: 'error' , component: ClassesComponent , data: {message: 'Page not found!!!'}},    DATE STATICE
   // { path: '**', redirectTo: 'error'}
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes , {
+    anchorScrolling: 'enabled'
+  })],
   // imports: [RouterModule.forRoot(routes , {useHash: true})],
   exports: [RouterModule]
 })
