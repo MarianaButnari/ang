@@ -1,13 +1,13 @@
 <section id="slide">
-<!--  <div class="container-fluid">-->
-<!--    <div class="row">-->
-<!--      <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12">-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
   <div class="d-block w-100 carousel-inner">
     <div class="carousel-item active">
       <img [src]="imgUrl1" class="d-block w-100 h-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <a href="#" class="section-btn btn btn-default">Discover more</a>
+        <a (click)="scrollToElement('about')" routerLink="." class="section-btn btn btn-default">Discover more</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -15,7 +15,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h1>Start your journey with our practical courses</h1>
         <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
-        <a href="#" class="section-btn btn btn-default">Take a course</a>
+        <a routerLink="." class="section-btn btn btn-default">Take a course</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -23,8 +23,8 @@
       <div class="carousel-caption d-none d-md-block">
         <h1>Efficient Learning Methods</h1>
         <h3>If you are like many students, your time is limited so it is important to get the most educational value out of the time you have available.Visit
-          <a rel="nofollow" href="https://www.facebook.com/">IELLO</a> page.</h3>
-        <a (click)="toContact()" routerLink="contact" class="section-btn btn btn-default">Let's chat</a>
+          <a rel="nofollow" routerLink="https://www.facebook.com/">IELLO</a> page.</h3>
+        <a (click)="scrollToElement('footer')" routerLink="." class="section-btn btn btn-default">Let's chat</a>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+      </div>
+    </div>
+  </div>
 </section>

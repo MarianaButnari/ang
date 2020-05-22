@@ -1,36 +1,36 @@
-/*#carouselExampleCaptions{*/
-/*  margin-top: 80px;*/
-/*  transition: all 2s;*/
-/*}*/
-/*.carousel-inner{*/
-/*  display: flex;*/
-/*  justify-content: center;*/
-/*  flex-direction: column;*/
-/*  text-align: center;*/
-/*}*/
-/*.carousel-item{*/
-/*  background-repeat: no-repeat;*/
-/*  background-attachment: local;*/
-/*  background-size: cover;*/
-/*  height: 650px;*/
-/*}*/
-/*h1 , h3, a{*/
-/*  color: black;*/
-/*}*/
-/*.carousel-item h3 a:hover{*/
-/*  color: #f2db9b;*/
-/*}*/
-/*.section-btn {*/
-/*  background: transparent;*/
-/*  border-radius: 50px;*/
-/*  border: 1px solid #ffffff;*/
-/*  font-size: inherit;*/
-/*  font-weight: normal;*/
-/*  padding: 15px 30px;*/
-/*  transition: 0.5s;*/
-/*}*/
+#carouselExampleCaptions{
+  margin-top: 80px;
+  transition: all 2s;
+}
+.carousel-inner{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.carousel-item{
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  height: 650px;
+}
+h1 , h3, a{
+  color: black;
+}
+.carousel-item h3 a:hover{
+  color: #f2db9b;
+}
+.section-btn {
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 15px 30px;
+  transition: 0.5s;
+}
 
-/*.section-btn:hover {*/
-/*  background: #ffffff;*/
-/*  border-color: transparent;*/
-/*}*/
+.section-btn:hover {
+  background: #ffffff;
+  border-color: transparent;
+}

@@ -14,41 +14,43 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item " routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active">
+<!--                  <a class="nav-link" [routerLink]="" fragment="nav"> Home </a>-->
                   <a class="nav-link" (click)="onClickScroll('nav')" routerLink="first"> Home </a>
-<!--                  <a class="nav-link" (click)="toHome()" routerLink="first"> Home </a>-->
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" (click)="onClickScroll('about')" routerLink="about"> About </a>
-<!--                  <a class="nav-link" (click)="toAbout()" routerLink="about"> About </a>-->
+<!--                  <a class="nav-link" [routerLink]="" fragment="about"> About </a>-->
+                  <a class="nav-link" (click)="onClickScroll('about')" routerLink="."> About </a>
+                <li class="nav-item" routerLinkActive="active">
+<!--                <a class="nav-link" [routerLink]="" fragment="team"> Team </a>-->
+                  <a class="nav-link" (click)="onClickScroll('team')" routerLink="."> Team </a>
+              </li>
+                <li class="nav-item" routerLinkActive="active">
+<!--                  <a class="nav-link" [routerLink]="" fragment="form"> Reviews </a>-->
+                  <a class="nav-link" (click)="onClickScroll('form')" routerLink="." > Reviews </a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" (click)="onClickScroll('team')" routerLink="ourTeam"> Team </a>
-<!--                  <a class="nav-link" (click)="toTeam()" routerLink="ourTeam"> Our Team </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item" routerLinkActive="active">-->
-<!--                  <a class="nav-link" routerLink="#"> Courses </a>-->
-<!--                </li>-->
-                <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" (click)="onClickScroll('form')" routerLink="form"> Reviews </a>
-<!--                  <a class="nav-link" (click)="scrolltoReviews()" routerLink="form"> Reviews </a>-->
+<!--                  <a class="nav-link" [routerLink]="" fragment="map"> Map </a>-->
+                  <a class="nav-link" (click)="onClickScroll('map')" routerLink="."> Map </a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" (click)="onClickScroll('map')" routerLink="map"> Map </a>
-<!--                  <a class="nav-link" (click)="scrolltoMap()" routerLink="map"> Map </a>-->
-                </li>
-                <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" (click)="onClickScroll('footer')" routerLink="footer"> Contact </a>
-<!--                  <a class="nav-link" (click)="scrolltoContact()" routerLink="footer"> Contact </a>-->
+<!--                  <a class="nav-link" [routerLink]="" fragment="footer"> Contact </a>-->
+                  <a class="nav-link" (click)="onClickScroll('footer')" routerLink="." > Contact </a>
                 </li>
               </ul>
             </div>
             <div>
-              <ul class="nav navbar-nav navbar-right">
-                <li class="phone-num">
-                  <a class="nav-link" routerLink ="#">
+              <ul class="nav navbar-nav navbar-right float-right row no-gutters py-1">
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/wish">
+                    <!--insigna wish list-->
+                    <i class="icon-sm  fa fa-heart"></i>Favorites
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link">
                          <!--insigna telefonului-->
-                    <i class="fa fa-phone"></i>+37369880998
+                    <i class="fa fa-phone"></i>+0987654321
                   </a>
                 </li>
               </ul>

@@ -5,10 +5,18 @@
 
 }
 .fas{
-  color:#f2db9b;
+  height: 34px;
+  width: 34px;
+  background-color: #f2db9b;
+  color: #ffffff;
+  display: inline-block;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 50%;
+  margin-right: 11px;
 }
 
-.inner-header .navbar ul li.phone-num i {
+.inner-header .navbar ul li.nav-item i {
   height: 34px;
   width: 34px;
   background-color: #f2db9b;

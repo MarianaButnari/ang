@@ -2,12 +2,17 @@ section {
   position: relative;
   padding: 100px 0;
 }
-.team{
+
+#team{
   border: 15px;
   padding: 50px;
   margin: 20px;
 }
-.card{
+h2 , small{
+  display: block;
+  text-align: center;
+}
+.card-data{
 text-align: center;
 }
 .social-icons{

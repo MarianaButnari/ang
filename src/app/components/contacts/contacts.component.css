@@ -3,7 +3,7 @@ section {
   padding: 100px 0;
 }
 #footer {
-  background-color: black;
+  background-color: #252020;
   padding: 50px;
 }
 
@@ -11,7 +11,7 @@ section {
   padding-bottom: 5px;
 }
 
-#footer h2 {
+#footer h2{
   font-size: 20px;
 }
 
@@ -36,7 +36,7 @@ section {
   margin-right: 2em;
 }
 
-.footer-info h2 {
+.footer-info h2 , h6{
   color: #ffffff;
   padding: 0;
 }
@@ -67,27 +67,24 @@ section {
   margin: 5px 0;
 }
 
-.newsletter-form input[type="submit"] {
+.newsletter-form .submit-btn {
   background: transparent;
   border: 1px solid #29ca8e;
   border-radius: 50px;
-  color: #ffffff;
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
   outline: none;
   width: 50%;
 }
 
-.newsletter-form input[type="submit"]:hover {
+
+.newsletter-form .submit-btn:hover {
   background: #29ca8e;
   border-color: transparent;
 }
-
-.newsletter-form .form-group span {
+span {
   color: white;
   display: block;
-  font-size: 12px;
-  margin-top: 20px;
 }
 .social-icon {
   position: relative;
@@ -104,10 +101,10 @@ section {
 .social-icon li a {
   border-radius: 100px;
   color: #29ca8e;
-  font-size: 15px;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+  font-size: 35px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   text-decoration: none;
   text-align: center;
   transition: all 0.4s ease-in-out;

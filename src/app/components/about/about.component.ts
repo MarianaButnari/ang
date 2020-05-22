@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -7,19 +7,23 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  buttonStatus = 'Start';
-  newButtonStatus = 'Welcome!';
+  @ViewChild('myFormAbout') signUpForm :NgForm;
+   buttonStatus = 'Start';
+   newButtonStatus = 'Welcome!';
 
   constructor() { }
 
-  ngOnInit(): void {
-  };
-  onSubmit(form: NgForm) {
-    console.log('Your form data : ', form.value);
+  ngOnInit(): void { };
+
+  changeButtonStatus() {
+    this.buttonStatus = this.newButtonStatus;
   }
 
-  changeButtonStatus($event: MouseEvent) {
-    this.buttonStatus = this.newButtonStatus;
+  // onSubmitAbout(form:NgForm){
+  //   console.log(form)
+  // }
 
+  onSubmitAbout() {
+    console.log('Your form data : '+ this.signUpForm);
   }
 }

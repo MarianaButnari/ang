@@ -1,7 +1,7 @@
 <section id="footer" >
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4 col-sm-6">
+      <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
         <div class="footer-info">
           <div class="section-title">
             <h2>Headquarter</h2>
@@ -9,57 +9,68 @@
           <address>
             <p>Digital Park<br>Mihai Viteazul 15,Chisinau</p>
           </address>
-
           <ul class="social-icon">
             <li><a style="cursor: pointer" class="fa fa-facebook-square" attr="facebook icon"></a></li>
             <li><a style="cursor: pointer" class="fa fa-instagram"></a></li>
           </ul>
-
           <div class="copyright-text">
             <p>Copyright &copy; 2020 Iello</p>
           </div>
         </div>
       </div>
-
-      <div class="col-md-4 col-sm-6">
+      <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
         <div class="footer-info">
           <div class="section-title">
             <h2>Contact Info</h2>
           </div>
           <address>
-            <p>+37369880998</p>
-            <p><a href="mailto:mail.co">iello@email.co</a></p>
+            <p>+0987654321</p>
+            <p><a routerLink="mailto:mail.co">email@mail.com</a></p>
           </address>
-
           <div class="footer_menu">
             <h2>Quick Links</h2>
             <ul>
-              <li><a style="cursor: pointer">Career</a></li>
-              <li><a style="cursor: pointer">Investor</a></li>
-              <li><a style="cursor: pointer">Terms & Conditions</a></li>
+              <li><a style="cursor: pointer">Career</a></li> <br>
+              <li><a style="cursor: pointer">Investor</a></li> <br>
+              <li><a style="cursor: pointer">Terms & Conditions</a></li> <br>
               <li><a style="cursor: pointer">Refund Policy</a></li>
             </ul>
           </div>
         </div>
       </div>
-
-      <div class="col-md-4 col-sm-12">
+      <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
         <div class="footer-info newsletter-form">
           <div class="section-title">
-            <h2>Newsletter Signup</h2>
+            <h2>Newsletter Sign-up</h2>
           </div>
           <div>
-            <div class="form-group">
-              <form action="#" method="get"  #myform = "ngForm" (ngSubmit) = "onSubmit(myform)">
-                <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="" ngModel>
-                <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
-              </form>
-              <span><sup>*</sup> Please note - we do not spam your email.</span>
+            <form [formGroup]="newsletterSignUp" (ngSubmit)="onSubmitNewsletter()">
+              <div class="form-group">
+                <input type="email"
+                       class="form-control"
+                       placeholder="Enter your email"
+                       id="email"
+                       formControlName="email">
+                <span *ngIf="!newsletterSignUp.get('email').valid &&
+                              newsletterSignUp.get('email').touched"
+                      class="help-block">Please enter a valid email!</span>
+                <div formArrayName="suggestion">
+                  <h6>Your Suggestion</h6>
+                  <button class="submit-btn form-control" type="button"
+                          (click)="onAddSuggestion()" >Add Suggestion </button>
+                  <span><small><sup>*</sup> If you have any suggestions,please let us know!</small></span>
+                  <div class="form-group"
+                       *ngFor="let suggestion of getControls() ; let i = index">
+                    <input type="text" class="form-control" [formControlName]="i">
+                    </div>
+                </div>
+                <button class="submit-btn form-control"> Send Me </button>
+              </div>
+              <span><small><sup>*</sup> Please note - we do not spam your email.</small></span>
+            </form>
             </div>
           </div>
         </div>
       </div>
-
-    </div>
-    </div>
+  </div>
 </section>

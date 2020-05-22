@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
-
+import { MyOunPipe } from "./components/main/myPipe.pipe";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
@@ -16,13 +16,17 @@ import { NewsComponent } from './components/news/news.component';
 import { MapComponent } from './components/map/map.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AboutComponent } from './components/about/about.component';
-import { ClassesComponent } from './components/classes/classes.component';
+import {HttpClientModule} from "@angular/common/http";
+import { WishListComponent } from './components/wish-list/wish-list.component';
+import { SharedCourseService } from './components/shared/shared-course.service';
+
 
 
 
 
 @NgModule({
   declarations: [
+    MyOunPipe,
     AppComponent,
     FirstComponentComponent,
     MainComponent,
@@ -33,15 +37,19 @@ import { ClassesComponent } from './components/classes/classes.component';
     MapComponent,
     ContactsComponent,
     AboutComponent,
-    ClassesComponent
+    WishListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    BrowserAnimationsModule,
     RouterModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ SharedCourseService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

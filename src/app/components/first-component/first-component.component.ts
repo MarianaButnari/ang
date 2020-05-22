@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 
 
@@ -8,7 +9,8 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./first-component.component.css']
 })
 export class FirstComponentComponent implements OnInit {
-constructor() { }
+constructor() {
+}
 ngOnInit(): void {
   }
 }

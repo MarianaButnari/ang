@@ -1,55 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
-  // styleUrls: ['./carousel.component.css'],
-  styles: [`
-    #carouselExampleCaptions{
-      margin-top: 80px;
-      transition: all 2s;
-    }
-    .carousel-inner{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
-    .carousel-item{
-      background-repeat: no-repeat;
-      background-attachment: local;
-      background-size: cover;
-      height: 650px;
-    }
-    h1 , h3, a{
-      color: black;
-    }
-    .carousel-item h3 a:hover{
-      color: #f2db9b;
-    }
-    .section-btn {
-      background: transparent;
-      border-radius: 50px;
-      border: 1px solid #ffffff;
-      font-size: inherit;
-      font-weight: normal;
-      padding: 15px 30px;
-      transition: 0.5s;
-    }
-
-    .section-btn:hover {
-      background: #ffffff;
-      border-color: transparent;
-    } `]
+  styleUrls: ['./carousel.component.css']
 
 })
 export class CarouselComponent implements OnInit {
-  constructor() {}
+  constructor(private viewportScroller: ViewportScroller) {}
   imgUrl1 = 'https://d585tldpucybw.cloudfront.net/sfimages/default-source/blogs/templates/angulart2-dark_1200x303.png?sfvrsn=b936a75a_0';
   imgUrl2 = 'https://135525-391882-2-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/11/Angular_6_and_Beyond.png';
   imgUrl3 = 'https://www.monterail.com/hubfs/angular2.jpg';
  ngOnInit() {}
-  toContact() {
-    document.getElementById('footer').scrollIntoView();
+  scrollToElement( elementId : string ) : void {
+   this.viewportScroller.scrollToAnchor(elementId);
+
   }
 }

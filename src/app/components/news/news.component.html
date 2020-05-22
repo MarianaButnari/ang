@@ -1,5 +1,49 @@
-<div class="news-info">
-<!-- string interpolation-->
-  <h1> This is {{name}} !!! </h1>
-  <h4>Our team are working hard to make studying interesting</h4>
-</div>
+<section id="courses">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+        <div class="section-title">
+          <h2>Popular Courses <small>Upgrade your skills with newest courses</small></h2>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xl-3 col-md-6 col-sm-12" *ngFor="let classes of courseList">
+        <div class="item d-flex justify-content-center" style="width: 18rem; height: 30rem; display: flex;">
+          <div class="courses-thumb">
+            <div class="courses-top">
+              <div class="courses-image">
+                <img [src]="classes.imagePath" class="img-responsive" alt="{{classes.courseName}}" style="width: 18rem; height: 12rem;">
+              </div>
+              <div class="courses-date">
+                <span><i class="fa fa-calendar"></i>{{classes.date}}</span>
+                <span><i class="fa fa-clock-o"></i>{{classes.hours}}</span>
+                <span class="float-right">
+                  <a class="btn btn-outline-light"
+                     type="button"
+                     [@wishList]="state"
+                     (click)="onAnimate()">
+											<i class="fa fa-heart"> </i>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <div class="courses-detail">
+              <h3><a routerLink="#">{{classes.courseName}}</a></h3>
+              <p>{{classes.courseDescription}}</p>
+            </div>
+            <a (click)="onClickScroll('team')" routerLink=".">
+              <div class="courses-info">
+                <div class="courses-author">
+                  <img [src]="classes.teacher.imagePath" class="img-responsive" alt="{{classes.teacher.name}}">
+                  <span>{{classes.teacher.name}}</span>
+                </div>
+                <div class="courses-price">
+                  <a><span> {{classes.cost}}</span></a>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

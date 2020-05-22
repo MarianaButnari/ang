@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contacts',
@@ -7,11 +7,27 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
+  // REACTIVE FORM
 
-  constructor() { }
+  newsletterSignUp: FormGroup;
+
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.newsletterSignUp = new FormGroup({
+      'email': new FormControl(null, [Validators.required, Validators.email]),
+      'suggestion': new FormArray([])
+    });
   }
-  onSubmit(form: NgForm) {
-    console.log('Your form data : ', form.value);}
+  onSubmitNewsletter(){
+    console.log(this.newsletterSignUp.value);
+  }
+  onAddSuggestion(){
+    const control = new FormControl(null , Validators.required);
+    (<FormArray>this.newsletterSignUp.get('suggestion')).push(control);
+  }
+  getControls(){
+    return (this.newsletterSignUp.get('suggestion') as FormArray).controls;
+  }
 }
