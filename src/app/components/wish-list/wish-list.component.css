@@ -2,3 +2,7 @@ section {
   position: relative;
   padding: 100px 0;
 }
+h2 , small{
+  display: block;
+  text-align: center;
+}

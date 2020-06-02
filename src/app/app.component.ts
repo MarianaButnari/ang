@@ -1,6 +1,7 @@
-import {Component, OnInit, } from '@angular/core';
+import {Component, OnInit,} from '@angular/core';
 import {ViewportScroller} from "@angular/common";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+
 
 
 @Component({
@@ -8,15 +9,17 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit{
   title = 'angularNew';
   public isMenuCollapsed = true;
   constructor( private route: ActivatedRoute,
-               private viewportScroller: ViewportScroller) {}
-
-  ngOnInit() { }
-  public onClickScroll(elementId:string):void{
-    this.viewportScroller.scrollToAnchor(elementId)
+               private router:Router,
+               private viewportScroller: ViewportScroller) {
   }
 
+  ngOnInit() {}
+
+  public onClickScroll(elementId:string):void{
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 }

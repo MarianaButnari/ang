@@ -6,6 +6,7 @@ import {ReviewService} from "./review.service";
 import {Subscription} from "rxjs";
 
 
+
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
@@ -13,9 +14,7 @@ import {Subscription} from "rxjs";
 })
 export class FormsComponent implements OnInit, OnDestroy {
    @ViewChild('myFormReview' , {static: false}) reviewForm : NgForm;
-
 // TEMPLATE-DRIVEN
-
   modelReview = new ReviewModel('Mary' , 'email@mail.com' , 'Great Job!');
   loadedReviews: ReviewModel[] = [];
   submitReview = false;
@@ -26,7 +25,7 @@ export class FormsComponent implements OnInit, OnDestroy {
 constructor(private http: HttpClient ,
             private reviewService: ReviewService) { }
 
-  imageUrl1 = 'https://internet-mktg.com/wp-content/uploads/2016/07/wordpress-plugins-2016-1.jpg';
+  imageUrl1 = 'assets/images/feedback1.png';
 
   ngOnInit() {
     this.errorSub = this.reviewService.error.subscribe(errorMessage => {
@@ -57,9 +56,6 @@ constructor(private http: HttpClient ,
     }
     );
   }
-
-
-
    // newReview(){this.modelReview = new ReviewModel('','','');}
 
   onClearReview(){

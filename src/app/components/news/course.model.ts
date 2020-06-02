@@ -8,6 +8,7 @@ export class CourseModel {
   public courseDescription: string;
   public teacher: Teacher;
   public cost: number;
+  public id?:number;
 
   constructor( imagePath: string , date: string , hours: string, courseName: string, courseDescription: string ,teacher: Teacher, cost: number) {
     this.imagePath = imagePath;

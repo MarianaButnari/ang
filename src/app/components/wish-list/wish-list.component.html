@@ -5,17 +5,18 @@
         <div class="section-title">
           <h2>Saved Courses <small>Feel free to enroll in our online courses!</small></h2>
         </div>
+        <div *ngIf="wishListItems.length === 0">Your Wish List is Empty.</div>
       </div>
-      <div class="card col-lg-10 col-xl-10 col-md-10 col-sm-10">
+      <div class="card col-lg-10 col-xl-10 col-md-10 col-sm-10" *ngIf="wishListItems.length > 0">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img [src]="" class="card-img" alt="">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Course title</h5>
+              <h5 class="card-title"> course name </h5>
               <div class="price-wrap">
-                <var class="price">Course price &euro;</var>
+                <var class="price">course price &euro;</var>
               </div>
               <div>
                 <a data-original-title="Save to WishList" title="" routerLink="" class="btn btn-outline-dark" data-toggle="tooltip">

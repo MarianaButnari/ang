@@ -1,4 +1,4 @@
-<section id="about">
+<section id="signUp">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
@@ -24,14 +24,14 @@
          </span>
         </div>
       </div>
-      <div class="form">
+      <div class="form-group">
           <div class="container">
             <div class="row">
               <div class="col-md-offset-1 col-md-12 col-sm-12">
                 <div class="entry-form">
-                  <form id="contact-form" role="form" action="mailto:mail@gmail.com" method="get"
-                        #myFormAbout = "ngForm" (ngSubmit) = "onSubmitAbout()">
+                  <form (ngSubmit) = "onSubmitAbout(myFormAbout.value)" #myFormAbout = "ngForm">
                     <h2>Sign-up today </h2>
+                    <div class="form-group">
                     <input
                       type="text"
                       class="form-control"
@@ -57,15 +57,27 @@
                       name="password"
                       required=""
                       ngModel
+                      minlength="6"
                       #password="ngModel">
                     <span class="help-block" *ngIf="(!name.valid && name.touched) || (!email.valid && email.touched)||
                     (!password.valid && password.touched)"> Please enter a valid data! </span>
-                    <button
-                    class="submit-btn form-control"
-                    id="contact-submit"
-                      [disabled]="!myFormAbout.valid"
-                      (click)="changeButtonStatus(); myFormAbout.reset()"> {{buttonStatus}}
-                    </button>
+                    <div class="row no-gutters justify-content-center">
+                      <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                      <button
+                      class="submit-btn form-control"
+                      type="submit"
+                      [disabled]="!myFormAbout.valid">
+                        {{isLoginMode? 'Login' : 'Sign Up'}}
+                      </button> |
+                      </div>
+                      <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+                      <button
+                        class="submit-btn form-control"
+                        type="button"
+                        (click)="onSwitchMode()"> {{isLoginMode? 'Sign Up' : 'Login'}} </button>
+                      </div>
+                    </div>
+                    </div>
                   </form>
                 </div>
               </div>

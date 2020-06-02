@@ -8,13 +8,15 @@ import {ViewportScroller} from "@angular/common";
 
 })
 export class CarouselComponent implements OnInit {
-  constructor(private viewportScroller: ViewportScroller) {}
-  imgUrl1 = 'https://d585tldpucybw.cloudfront.net/sfimages/default-source/blogs/templates/angulart2-dark_1200x303.png?sfvrsn=b936a75a_0';
-  imgUrl2 = 'https://135525-391882-2-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/11/Angular_6_and_Beyond.png';
-  imgUrl3 = 'https://www.monterail.com/hubfs/angular2.jpg';
+  constructor( private viewportScroller: ViewportScroller) {}
+  imgUrl1 = 'assets/images/carousel2.png';
+  imgUrl2 = 'assets/images/carousel1.png';
+  imgUrl3 = 'assets/images/carousel3.png';
  ngOnInit() {}
   scrollToElement( elementId : string ) : void {
    this.viewportScroller.scrollToAnchor(elementId);
 
   }
+
 }
+

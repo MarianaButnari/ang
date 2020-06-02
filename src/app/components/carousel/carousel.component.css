@@ -23,7 +23,7 @@ h1 , h3, a{
 .section-btn {
   background: transparent;
   border-radius: 50px;
-  border: 1px solid #ffffff;
+  border: 1px solid #29ca8e;
   font-size: inherit;
   font-weight: normal;
   padding: 15px 30px;
@@ -31,6 +31,6 @@ h1 , h3, a{
 }
 
 .section-btn:hover {
-  background: #ffffff;
+  background: #29ca8e;
   border-color: transparent;
 }

@@ -24,8 +24,8 @@ section {
   border-radius: 100%;
   text-align: center;
   padding: 6em;
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
 }
 .entry-form h2{
   color: white;
@@ -45,7 +45,7 @@ section {
   border-radius: 50px;
   border: 0;
   color: #252020;
-  width: 50%;
+  width: 150px;
   height: 50px;
   margin: 30px auto 10px;
 }

@@ -12,24 +12,27 @@ import {WishListComponent} from "./components/wish-list/wish-list.component";
 
 
 const routes: Routes = [
+  { path: '' , pathMatch:'full', redirectTo: 'first' },
   { path: 'first',component: FirstComponentComponent ,
   children: [
     { path: 'carousel' , component: CarouselComponent },
-    { path: 'about', component: AboutComponent },
+    { path: 'about',  component: AboutComponent },
     { path: 'cards' , component: CardsComponent },
     { path: 'reviews' , component: FormsComponent },
     { path: 'map' , component: MapComponent },
     { path: 'contacts' , component: ContactsComponent }
-  ]},
-   { path: 'wish' , component: WishListComponent },
-  { path: '' , pathMatch:'full', redirectTo: 'first' }
+  ]
+  },
+   { path: 'wish' , component: WishListComponent }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes , {
     // useHash: true,
-    anchorScrolling: 'enabled' ,
     onSameUrlNavigation: 'reload' ,
+    // scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled' ,
     enableTracing: true
   })],
   exports: [RouterModule]

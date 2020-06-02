@@ -14,28 +14,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 <!--                  <a class="nav-link" [routerLink]="" fragment="nav"> Home </a>-->
                   <a class="nav-link" (click)="onClickScroll('nav')" routerLink="first"> Home </a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 <!--                  <a class="nav-link" [routerLink]="" fragment="about"> About </a>-->
-                  <a class="nav-link" (click)="onClickScroll('about')" routerLink="."> About </a>
-                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" (click)="onClickScroll('signUp')" routerLink="." fragment="signUp"> SignUp </a>
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 <!--                <a class="nav-link" [routerLink]="" fragment="team"> Team </a>-->
-                  <a class="nav-link" (click)="onClickScroll('team')" routerLink="."> Team </a>
+                  <a class="nav-link" (click)="onClickScroll('team')" routerLink="." fragment="team"> Team </a>
               </li>
-                <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 <!--                  <a class="nav-link" [routerLink]="" fragment="form"> Reviews </a>-->
-                  <a class="nav-link" (click)="onClickScroll('form')" routerLink="." > Reviews </a>
+                  <a class="nav-link" (click)="onClickScroll('form')" routerLink="." fragment="reviews"> Reviews </a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 <!--                  <a class="nav-link" [routerLink]="" fragment="map"> Map </a>-->
-                  <a class="nav-link" (click)="onClickScroll('map')" routerLink="."> Map </a>
+                  <a class="nav-link" (click)="onClickScroll('map')" routerLink="." fragment="map"> Map </a>
                 </li>
-                <li class="nav-item" routerLinkActive="active">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
 <!--                  <a class="nav-link" [routerLink]="" fragment="footer"> Contact </a>-->
-                  <a class="nav-link" (click)="onClickScroll('footer')" routerLink="." > Contact </a>
+                  <a class="nav-link" (click)="onClickScroll('footer')" routerLink="." fragment="contacts"> Contact </a>
                 </li>
               </ul>
             </div>
@@ -56,10 +56,9 @@
               </ul>
             </div>
           </nav>
-          <router-outlet></router-outlet>
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<router-outlet></router-outlet>

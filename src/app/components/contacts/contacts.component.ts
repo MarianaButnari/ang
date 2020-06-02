@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormArray, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contacts',
@@ -12,7 +12,7 @@ export class ContactsComponent implements OnInit {
   newsletterSignUp: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.newsletterSignUp = new FormGroup({
