@@ -1,0 +1,61 @@
+<div class="entry-form">
+  <div class="alert alert-danger" *ngIf="error">
+    <p>{{error}}</p>
+  </div>
+  <div *ngIf="isLoading" style="text-align: center">
+    <app-loading-spiner></app-loading-spiner>
+  </div>
+  <form #myFormAbout = "ngForm" (ngSubmit) = "onSubmitAbout(myFormAbout)" *ngIf="!isLoading">
+    <h2>Sign-up today </h2>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Enter your name"
+        name="name"
+        required=""
+        ngModel
+        #name="ngModel">
+      <!--                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger"> Name is required </div>-->
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Enter your email address"
+        name="email"
+        required
+        email
+        ngModel
+        #email="ngModel">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter your password"
+        name="password"
+        required=""
+        ngModel
+        minlength="6"
+        #password="ngModel">
+      <span class="help-block" *ngIf="(!email.valid && email.touched)||(!name.valid && name.touched) ||
+                                      (!password.valid && password.touched)"> Please enter a valid data!
+      </span>
+      <div class="row no-gutters justify-content-center">
+        <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+          <button
+            class="submit-btn form-control"
+            type="submit"
+            [disabled]="!myFormAbout.valid">
+            {{isLoginMode? 'Login' : 'Sign Up'}}
+          </button> |
+        </div>
+        <div class="col-lg-6 col-xl-6 col-md-12 col-sm-12">
+          <button
+            class="submit-btn form-control"
+            type="button"
+            (click)="onSwitchMode()"> {{isLoginMode? 'Sign Up' : 'Login'}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
