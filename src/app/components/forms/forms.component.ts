@@ -1,9 +1,9 @@
-import {Component, OnInit, ViewChild,OnDestroy} from '@angular/core';
+import {Component, OnInit, ViewChild, OnDestroy} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {ReviewModel} from "./review.model";
-import {HttpClient} from "@angular/common/http";
-import {ReviewService} from "./review.service";
-import {Subscription} from "rxjs";
+import {ReviewModel} from './review.model';
+import {HttpClient} from '@angular/common/http';
+import {ReviewService} from './review.service';
+import {Subscription} from 'rxjs';
 
 
 
@@ -13,7 +13,7 @@ import {Subscription} from "rxjs";
   styleUrls: ['./forms.component.css']
 })
 export class FormsComponent implements OnInit, OnDestroy {
-   @ViewChild('myFormReview' , {static: false}) reviewForm : NgForm;
+   @ViewChild('myFormReview' , {static: false}) reviewForm: NgForm;
 // TEMPLATE-DRIVEN
   modelReview = new ReviewModel('Mary' , 'email@mail.com' , 'Great Job!');
   loadedReviews: ReviewModel[] = [];
@@ -33,10 +33,10 @@ constructor(private http: HttpClient ,
     });
 
     this.submitReview = true;
-    this.reviewService.postReview().subscribe(reviews=>{
+    this.reviewService.postReview().subscribe(reviews => {
       this.submitReview = false;
       this.loadedReviews = reviews;
-    },error => {
+    }, error => {
       this.error = error.message;
     }
     );
@@ -44,23 +44,23 @@ constructor(private http: HttpClient ,
   }
 
   onSubmit(reviewPost: ReviewModel) {
-    this.reviewService.storeReview(reviewPost.name, reviewPost.email,reviewPost.message);
+    this.reviewService.storeReview(reviewPost.name, reviewPost.email, reviewPost.message);
   }
-  onPostReview(){
+  onPostReview() {
     this.submitReview = true;
-    this.reviewService.postReview().subscribe(reviews=>{
+    this.reviewService.postReview().subscribe(reviews => {
       this.submitReview = false;
       this.loadedReviews = reviews;
-    },error => {
+    }, error => {
       this.error = error.message;
     }
     );
   }
    // newReview(){this.modelReview = new ReviewModel('','','');}
 
-  onClearReview(){
-    this.reviewService.onDelete().subscribe(() =>{
-      this.loadedReviews=[];
+  onClearReview() {
+    this.reviewService.onDelete().subscribe(() => {
+      this.loadedReviews = [];
     });
   }
   ngOnDestroy() {

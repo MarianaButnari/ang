@@ -25,7 +25,7 @@
 <!--                <a class="nav-link" [routerLink]="" fragment="team"> Team </a>-->
                   <a class="nav-link" (click)="onClickScroll('team')" routerLink="." fragment="team"> Team </a>
               </li>
-                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
 <!--                  <a class="nav-link" [routerLink]="" fragment="form"> Reviews </a>-->
                   <a class="nav-link" (click)="onClickScroll('form')" routerLink="." fragment="reviews"> Reviews </a>
                 </li>
@@ -41,8 +41,12 @@
             </div>
             <div>
               <ul class="nav navbar-nav navbar-right float-right row no-gutters py-1">
-                <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" routerLink="/wish">
+                <li class="nav-item" *ngIf="isAuthenticated">
+                  <a class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i> Logout </a>
+                </li>
+                <li class="nav-item" routerLinkActive="active" *ngIf="isAuthenticated">
+                  <a class="nav-link" routerLink="/wish" >
                     <!--insigna wish list-->
                     <i class="icon-sm  fa fa-heart"></i>Favorites
                   </a>

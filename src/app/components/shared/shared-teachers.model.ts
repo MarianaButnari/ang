@@ -1,4 +1,4 @@
-import {Teacher} from "../cards/teacher.model";
+import {Teacher} from '../cards/teacher.model';
 
 export class SharedTeachersModel {
   public static readonly Teacher = [
@@ -14,5 +14,5 @@ export class SharedTeachersModel {
     new Teacher('assets/images/teacher4.png',
       'Max',
       'This is the best team that can teach you to code'),
-  ]
+  ];
 }

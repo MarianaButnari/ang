@@ -24,10 +24,22 @@ input[type='submit']:hover{
 }
 img{
   width: auto;
-  border: 15px;
-  padding: 15px;
-  margin: 15px;
 }
+/*.contact-image{*/
+/*  position: relative;*/
+/*  animation-name: feedback;*/
+/*  animation-duration: 3s;*/
+/*  animation-delay:1s;*/
+/*  animation-fill-mode: forwards;*/
+/*  animation-iteration-count: infinite;*/
+/*}*/
+/*@keyframes feedback {*/
+/*  !*from{top: 0px;}*!*/
+/*  !*to {top:50px;}*!*/
+/*  0% {top: 0px;}*/
+/*  50% {top: 50px;}*/
+/*  100% {top: 0px;}*/
+/*}*/
 h3 , small {
   text-align: center;
   display: block;

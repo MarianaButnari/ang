@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-import { MyOunPipe } from "./components/main/myPipe.pipe";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { MyOunPipe } from './components/main/myPipe.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -17,9 +17,11 @@ import { NewsComponent } from './components/news/news.component';
 import { MapComponent } from './components/map/map.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AboutComponent } from './components/about/about.component';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { WishListComponent } from './components/wish-list/wish-list.component';
 import { SharedCourseService } from './components/shared/shared-course.service';
+import { AuthenticationComponent } from './components/about/authentication/authentication.component';
+import { LoadingSpinerComponent } from './components/shared/loading-spiner/loading-spiner.component';
 
 
 
@@ -39,6 +41,8 @@ import { SharedCourseService } from './components/shared/shared-course.service';
     ContactsComponent,
     AboutComponent,
     WishListComponent,
+    AuthenticationComponent,
+    LoadingSpinerComponent,
 
   ],
   imports: [

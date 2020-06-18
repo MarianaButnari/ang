@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ViewportScroller} from "@angular/common";
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
@@ -9,11 +9,11 @@ import {ViewportScroller} from "@angular/common";
 })
 export class CarouselComponent implements OnInit {
   constructor( private viewportScroller: ViewportScroller) {}
-  imgUrl1 = 'assets/images/carousel2.png';
-  imgUrl2 = 'assets/images/carousel1.png';
+  imgUrl1 = 'assets/images/carousel1.png';
+  imgUrl2 = 'assets/images/carousel2.png';
   imgUrl3 = 'assets/images/carousel3.png';
  ngOnInit() {}
-  scrollToElement( elementId : string ) : void {
+  scrollToElement( elementId: string ): void {
    this.viewportScroller.scrollToAnchor(elementId);
 
   }

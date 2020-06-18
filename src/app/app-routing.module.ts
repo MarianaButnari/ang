@@ -4,16 +4,16 @@ import { FirstComponentComponent } from './components/first-component/first-comp
 import { FormsComponent } from './components/forms/forms.component' ;
 import { CardsComponent } from './components/cards/cards.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { AboutComponent } from "./components/about/about.component";
-import { MapComponent } from "./components/map/map.component";
-import { ContactsComponent } from "./components/contacts/contacts.component";
-import {WishListComponent} from "./components/wish-list/wish-list.component";
+import { AboutComponent } from './components/about/about.component';
+import { MapComponent } from './components/map/map.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import {WishListComponent} from './components/wish-list/wish-list.component';
 
 
 
 const routes: Routes = [
-  { path: '' , pathMatch:'full', redirectTo: 'first' },
-  { path: 'first',component: FirstComponentComponent ,
+  { path: '' , pathMatch: 'full', redirectTo: 'first' },
+  { path: 'first', component: FirstComponentComponent ,
   children: [
     { path: 'carousel' , component: CarouselComponent },
     { path: 'about',  component: AboutComponent },

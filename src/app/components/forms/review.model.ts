@@ -3,9 +3,9 @@ export class ReviewModel {
   email: string;
   message: string;
   id?: string;
-constructor(name: string,email: string,message: string) {
-  this.name=name;
-  this.email=email;
-  this.message=message;
+constructor(name: string, email: string, message: string) {
+  this.name = name;
+  this.email = email;
+  this.message = message;
 }
 }
